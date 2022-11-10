@@ -2,7 +2,7 @@ package org.example.restaurant;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SuppressWarnings({"ParameterCanBeLocal", "unused", "StringOperationCanBeSimplified", "UnusedAssignment"})
 public class JavaCoreTest {
@@ -15,8 +15,9 @@ public class JavaCoreTest {
          * Объекты a и b одинаковые? Добавьте соответвующий assert
          */
 
-        fail();
+        //fail();
         //assertXXXXXXX(a ==  b)
+        assertTrue(a == b);
 
         /*
          * Опишите причину:
@@ -32,8 +33,9 @@ public class JavaCoreTest {
          * Объекты a и b одинаковые? Добавьте соответвующий assert
          */
 
-        fail();
+        //fail();
         //assertXXXXXXX(a ==  b)
+        assertTrue(a == b);
 
         /*
          * Опишите причину:
@@ -49,9 +51,7 @@ public class JavaCoreTest {
          * Изменится ли объект a? Добавьте соответвующий assert
          */
 
-        fail();
-        //assertXXXXXXXXX("aaa", a);
-
+        assertEquals("aaa", a);
         /*
          * Опишите причину:
          *
@@ -68,9 +68,9 @@ public class JavaCoreTest {
          * Объекты a и b одинаковые? Добавьте соответвующий assert
          */
 
-        fail();
+        //fail();
         //assertXXXXXXX(a ==  b)
-
+        assertTrue(a == b);
         /*
          * Опишите причину:
          *
@@ -85,8 +85,9 @@ public class JavaCoreTest {
         /*
          * Изменится ли значение переменной b? Добавьте соответвующий assert
          */
-        fail();
+
         //assertXXXXXXX(101.0, b);
+        assertEquals(101.0, b);
     }
 
     static class A {
@@ -105,8 +106,9 @@ public class JavaCoreTest {
         /*
          * Изменится ли значение a.a? Добавьте соответвующий assert
          */
-        fail();
+
         //assertXXXXXXX(100, a.a);
+        assertEquals(100, a.a);
     }
 
     private void f2(A a) {
@@ -122,9 +124,9 @@ public class JavaCoreTest {
         /*
          * Изменится ли значение a.a? Добавьте соответвующий assert
          */
-        fail();
-        //assertXXXXXXX(100, a.a);
 
+        //assertXXXXXXX(100, a.a);
+        assertEquals(100, a.a);
     }
 
     ///
@@ -138,7 +140,7 @@ public class JavaCoreTest {
         /*
          * Одинаковое ли значение переменных a1 и a2? Добавьте соответвующий assert
          */
-        fail();
+        assertEquals(a1, a2);
         //assertXXXXXXX(a1, a2);
 
         /*

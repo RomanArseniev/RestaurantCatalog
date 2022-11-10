@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Random;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 @SuppressWarnings("ALL")
@@ -96,10 +96,15 @@ public class EqualsHashCodeTest {
          */
         //assertTrue....
         //assertFalse....
-        assertEquals(new Object(), a);
-        assertEquals(new Object(), b);
-        assertEquals(new Object(), d);
-        assertEquals(new Object(), e);
-        assertEquals(new Object(), f);
+        assertTrue(a);
+        assertFalse(b);
+        assertFalse(d);
+        assertFalse(e);
+        assertTrue(f);
+        //assertEquals(new Object(), a);
+        //assertEquals(new Object(), b);
+        //assertEquals(new Object(), d);
+        //assertEquals(new Object(), e);
+        //assertEquals(new Object(), f);
     }
 }
