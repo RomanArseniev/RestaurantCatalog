@@ -1,9 +1,29 @@
 package org.example.restaurant.service.impl;
 
+import liquibase.pro.packaged.R;
 import liquibase.repackaged.org.apache.commons.lang3.NotImplementedException;
 import org.example.restaurant.service.RoadMap;
 
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
 public class RoadMapImpl implements RoadMap {
+
+    String townA;
+    String townB;
+    int length;
+
+    Set<RoadMapImpl> setlist = new HashSet<>();
+
+    public RoadMapImpl() {
+    }
+    public RoadMapImpl(String townA, String townB, int length) {
+        this.townA = townA;
+        this.townB = townB;
+        this.length = length;
+    }
+
     /**
      * Добавление дороги в существующую сеть дорог. Дороги двустрониие.
      * Если есть дорога Москва Тверь, то можно попасть из Москвы в Тверь и из Твери в Москву.
@@ -23,8 +43,8 @@ public class RoadMapImpl implements RoadMap {
 
     @Override
     public void add(String townA, String townB, int length) {
-        //добавьте вашу реализацию
-        throw new NotImplementedException();
+        RoadMapImpl roadMap = new RoadMapImpl(townA, townB, length);
+        setlist.add(roadMap);
     }
 
     /**
@@ -40,7 +60,7 @@ public class RoadMapImpl implements RoadMap {
 
     @Override
     public int roadLength(String townA, String townB) {
-        //добавьте вашу реализацию
+
         throw new NotImplementedException();
     }
 
@@ -50,7 +70,6 @@ public class RoadMapImpl implements RoadMap {
      */
     @Override
     public int roadCount() {
-        //добавьте вашу реализацию
-        throw new NotImplementedException();
+        return setlist.size();
     }
 }
